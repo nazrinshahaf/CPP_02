@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:16:22 by nfernand          #+#    #+#             */
-/*   Updated: 2022/04/29 15:04:14 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/04/29 15:17:48 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,27 @@ Fixed	&Fixed::operator=(Fixed const &copy)
 bool	Fixed::operator==(Fixed &val)
 {
 	if (this->_fixed_point_value == val._fixed_point_value)
+		return 1;
+	return (0);
+}
+
+bool	Fixed::operator!=(Fixed &val)
+{
+	if (this->_fixed_point_value != val._fixed_point_value)
+		return 1;
+	return (0);
+}
+
+bool	Fixed::operator>(Fixed &val)
+{
+	if (this->_fixed_point_value > val._fixed_point_value)
+		return 1;
+	return (0);
+}
+
+bool	Fixed::operator<(Fixed &val)
+{
+	if (this->_fixed_point_value < val._fixed_point_value)
 		return 1;
 	return (0);
 }
@@ -117,7 +138,7 @@ int		Fixed::toInt(void) const
 float	Fixed::toFloat(void) const
 {
 	//can also multiply 1.0 or 1.0f to force float conversion
-	cout << "_fixed_point_value: " << this->_fixed_point_value << endl;
+	//cout << "_fixed_point_value: " << this->_fixed_point_value << endl;
 	return ((float)this->_fixed_point_value / (2 << (this->_fractional_bits - 1)));
 }
 

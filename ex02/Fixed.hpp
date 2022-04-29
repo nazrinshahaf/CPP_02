@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:15:59 by nfernand          #+#    #+#             */
-/*   Updated: 2022/04/29 15:02:43 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/04/29 15:16:45 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ class	Fixed
 
 		Fixed	&operator=(Fixed const &copy);
 		bool	operator==(Fixed &val);
+		bool	operator!=(Fixed &val);
+		bool	operator>(Fixed &val);
+		bool	operator<(Fixed &val);
 
 		Fixed	&operator++(); //Prefix
 		Fixed	operator++(int); //Postfix

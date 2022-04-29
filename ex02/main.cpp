@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:15:49 by nfernand          #+#    #+#             */
-/*   Updated: 2022/04/29 15:05:08 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/04/29 15:24:31 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main()
 	Fixed b(Fixed(5.05f) * Fixed(2));
 
 	cout << "b is " << b << endl << endl;
+	cout << "b is " << b / 2 << endl << endl;
 
 	Fixed c(Fixed(10.1f) / Fixed(2));
 
@@ -54,12 +55,85 @@ int	main()
 
 	cout << "f is " << f << endl;
 	cout << "g is " << g << endl;
-	cout << "h is " << h << endl;
-	if (f == g)
-		cout << "equal" << endl;
-	else
-		cout << "not equal" << endl;
+	cout << "h is " << h << endl << endl;
 
+	cout << "== operator" << endl;
+	cout << "f is ";
+	if (f == g)
+		cout << "equal ";
+	else
+		cout << "not equal ";
+	cout << "to g" << endl;
+
+	cout << "f is ";
+	if (f == h)
+		cout << "equal ";
+	else
+		cout << "not equal ";
+	cout << "to h" << endl;
+	cout << "== operator" << endl << endl;
+
+	cout << "!= operator" << endl;
+	cout << "f is ";
+	if (f != g)
+		cout << "equal ";
+	else
+		cout << "not equal ";
+	cout << "to g" << endl;
+
+	cout << "f is ";
+	if (f != h)
+		cout << "equal ";
+	else
+		cout << "not equal ";
+	cout << "to h" << endl;
+	cout << "!= operator" << endl << endl;
+
+	cout << "< operator" << endl;
+	cout << "f is ";
+	if (f < g)
+		cout << "less then ";
+	else
+		cout << "not less then ";
+	cout << "g" << endl;
+
+	cout << "f is ";
+	if (f < h)
+		cout << "less then ";
+	else
+		cout << "not less then ";
+	cout << "h" << endl;
+
+	cout << "g is ";
+	if (g < h)
+		cout << "less then ";
+	else
+		cout << "not less then ";
+	cout << "h" << endl;
+	cout << "< operator" << endl << endl;
+
+	cout << "> operator" << endl;
+	cout << "f is ";
+	if (f > g)
+		cout << "more then ";
+	else
+		cout << "not more then ";
+	cout << "g" << endl;
+
+	cout << "f is ";
+	if (f > h)
+		cout << "more then ";
+	else
+		cout << "not more then ";
+	cout << "h" << endl;
+
+	cout << "g is ";
+	if (g > h)
+		cout << "more then ";
+	else
+		cout << "not more then ";
+	cout << "h" << endl;
+	cout << "> operator" << endl << endl;
 //	Fixed	b(10.1f);
 //
 //	cout << endl;
