@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:16:22 by nfernand          #+#    #+#             */
-/*   Updated: 2022/03/21 15:21:17 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/10 16:43:05 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Fixed::Fixed(const float fvalue)
 {
 	cout << "Fixed float constructor called" << endl;
 	//formula : fixed point value = floor(float * 2^n)
-	//If i dont use power function i have to use (2 << (n -1))
+	//If i dont use power function i have to use floor(float * (2 << (n -1)))
 	this->_fixed_point_value = roundf(fvalue * (2 << (this->_fractional_bits - 1)));
 }
 
