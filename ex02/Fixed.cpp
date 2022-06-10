@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:16:22 by nfernand          #+#    #+#             */
-/*   Updated: 2022/05/04 11:08:38 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/05/04 15:46:11 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ bool	Fixed::operator==(const Fixed &val) const
 
 bool	Fixed::operator!=(const Fixed &val) const
 {
-	if (this-->getRawBits() != val.getRawBits())
+	if (this->getRawBits() != val.getRawBits())
 		return (1);
 	return (0);
 }
@@ -71,9 +71,9 @@ bool	Fixed::operator>(const Fixed &val) const
 	return (0);
 }
 
-bool	Fixed::operator>=(Fixed &val)
+bool	Fixed::operator>=(const Fixed &val) const
 {
-	if (this->_fixed_point_value >= val._fixed_point_value)
+	if (this->getRawBits() >= val.getRawBits())
 		return (1);
 	return (0);
 }
@@ -85,9 +85,9 @@ bool	Fixed::operator<(const Fixed &val) const
 	return (0);
 }
 
-bool	Fixed::operator<=(Fixed &val)
+bool	Fixed::operator<=(const Fixed &val) const
 {
-	if (this->_fixed_point_value <= val._fixed_point_value)
+	if (this->getRawBits() <= val.getRawBits())
 		return 1;
 	return (0);
 }

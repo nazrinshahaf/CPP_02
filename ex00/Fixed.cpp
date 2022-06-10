@@ -6,49 +6,51 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:16:22 by nfernand          #+#    #+#             */
-/*   Updated: 2022/03/21 13:33:47 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/10 10:48:04 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
 #include <iostream>
+
+#include "Fixed.hpp"
+
+#include "colours.h"
 
 using std::cout;
 using std::endl;
 
 Fixed::Fixed(void)
 {
-	cout << "Fixed defualt constructor called" << endl;
+	cout << GREEN "Fixed defualt constructor called" RESET << endl;
 	this->_fixed_point_value = 0;
 }
 
 Fixed::Fixed(Fixed const &copy)
 {
-	cout << "Fixed copy constructor called" << endl;
+	cout << GREEN "Fixed copy constructor called" RESET << endl;
 	*this = copy;
 }
 
 Fixed	&Fixed::operator=(Fixed const &copy)
 {
-	cout << "Fixed copy assignment operator called" << endl;
-	if (this != &copy)
-		this->_fixed_point_value = copy.getRawBits();
-	return *this;
+	cout << GREEN "Fixed copy assignment operator called" RESET << endl;
+	this->_fixed_point_value = copy.getRawBits();
+	return (*this);
 }
 
 Fixed::~Fixed(void)
 {
-	cout << "Fixed destructor called" << endl;
+	cout << RED "Fixed destructor called" RESET << endl;
 }
 
 int		Fixed::getRawBits(void) const
 {
-	cout << "getRawBits member function called" << endl;
+	cout << BLUE "getRawBits member function called" RESET << endl;
 	return (this->_fixed_point_value);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	cout << "setRawBits member function called" << endl;
+	cout << BLUE "setRawBits member function called" RESET << endl;
 	this->_fixed_point_value = raw;
 }
