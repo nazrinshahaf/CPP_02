@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:15:59 by nfernand          #+#    #+#             */
-/*   Updated: 2022/03/21 12:25:02 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/10 11:51:32 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class	Fixed
 	private:
 		int					_fixed_point_value;
 		static const int	_fractional_bits = 8;
+
+		static const bool 	_print_init = false;
 };
 
 #endif

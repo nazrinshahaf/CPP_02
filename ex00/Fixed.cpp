@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:16:22 by nfernand          #+#    #+#             */
-/*   Updated: 2022/06/10 10:48:04 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/10 11:51:27 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,14 @@ Fixed::~Fixed(void)
 
 int		Fixed::getRawBits(void) const
 {
-	cout << BLUE "getRawBits member function called" RESET << endl;
+	if (this->_print_init)
+		cout << BLUE "getRawBits member function called" RESET << endl;
 	return (this->_fixed_point_value);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	cout << BLUE "setRawBits member function called" RESET << endl;
+	if (this->_print_init)
+		cout << BLUE "setRawBits member function called" RESET << endl;
 	this->_fixed_point_value = raw;
 }
