@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:15:59 by nfernand          #+#    #+#             */
-/*   Updated: 2022/05/04 15:45:44 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/13 13:00:36 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ class	Fixed
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
-		static Fixed	&min(Fixed &val1, Fixed &val2);
+		static Fixed		&min(Fixed &val1, Fixed &val2);
 		static const Fixed	&min(const Fixed &val1, const Fixed &val2);
-		static Fixed	&max(Fixed &val1, Fixed &val2);
+		static Fixed		&max(Fixed &val1, Fixed &val2);
 		static const Fixed	&max(const Fixed &val1, const Fixed &val2);
 
 	private:

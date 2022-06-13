@@ -6,7 +6,7 @@
 /*   By: nfernand <nfernand@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:16:22 by nfernand          #+#    #+#             */
-/*   Updated: 2022/05/04 15:46:11 by nfernand         ###   ########.fr       */
+/*   Updated: 2022/06/13 11:25:33 by nfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ Fixed::Fixed(void)
 {
 	//cout << "Fixed defualt constructor called" << endl;
 	this->_fixed_point_value = 0;
+}
+
+Fixed::~Fixed(void)
+{
+	//cout << "Fixed destructor called" << endl;
 }
 
 Fixed::Fixed(Fixed const &copy)
@@ -124,7 +129,7 @@ Fixed	Fixed::operator/(Fixed const &val)
 	return temp;
 }
 
-Fixed	Fixed::operator++(int) //Prefix
+Fixed	Fixed::operator++(int) //Postfix
 {
 	Fixed	temp = *this;
 	++*this;
@@ -137,14 +142,14 @@ Fixed	&Fixed::operator++(void) //Prefix
 	return *this;
 }
 
-Fixed	Fixed::operator--(int) //Prefix
+Fixed	Fixed::operator--(int) //Postfix
 {
 	Fixed	temp = *this;
 	--*this;
 	return temp;
 }
 
-Fixed	&Fixed::operator--(void) //Postfix
+Fixed	&Fixed::operator--(void) //Prefix
 {
 	this->_fixed_point_value--;
 	return *this;
@@ -188,11 +193,6 @@ const Fixed	&Fixed::max(const Fixed &val1, const Fixed &val2)
 	if (val1 > val2)
 		return (val1);
 	return (val2);
-}
-
-Fixed::~Fixed(void)
-{
-	//cout << "Fixed destructor called" << endl;
 }
 
 int		Fixed::getRawBits(void) const
